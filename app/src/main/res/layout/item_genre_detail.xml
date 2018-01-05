@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="track"
+            type="com.framgia.soundclound.data.model.Track"/>
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:background="@color/color_orange"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_88">
+
+        <ImageView
+            android:id="@+id/imv_track"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="@dimen/dp_9"
+            android:layout_marginLeft="@dimen/dp16"
+            android:background="@color/color_gray"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_70" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
