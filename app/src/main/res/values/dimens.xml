@@ -5,4 +5,9 @@
     <dimen name="dp_70">70</dimen>
     <dimen name="dp16">16</dimen>
     <dimen name="dp_9">9</dimen>
+    <dimen name="dp_10">10</dimen>
+    <dimen name="sp24">24</dimen>
+    <dimen name="sp20">20</dimen>
+    <dimen name="sp12">12</dimen>
+    <dimen name="dp_14">14</dimen>
 </resources>

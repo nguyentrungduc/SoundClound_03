@@ -6,4 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.framgia.soundclound.screen.detailgenre.GenreDetailActivity">
 
+    <
+
 </android.support.constraint.ConstraintLayout>

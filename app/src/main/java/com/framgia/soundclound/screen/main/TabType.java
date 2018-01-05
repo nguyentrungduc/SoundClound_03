@@ -7,7 +7,8 @@ import static com.framgia.soundclound.screen.main.TabType.FAVORITE;
 import static com.framgia.soundclound.screen.main.TabType.HOME;
 import static com.framgia.soundclound.screen.main.TabType.PLAY_LIST;
 
-
+/**
+ * TabType in Tablayout*/
 @IntDef({HOME, PLAY_LIST, LOCAL, FAVORITE})
 public @interface TabType {
     int HOME = 0;

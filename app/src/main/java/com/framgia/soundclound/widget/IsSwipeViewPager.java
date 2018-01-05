@@ -33,23 +33,9 @@ public class IsSwipeViewPager extends ViewPager {
         }
     }
 
-    private void init() {
-        isSwipe = true;
-    }
-
     @Override
     public boolean onInterceptTouchEvent(MotionEvent event) {
         return isSwipe && super.onInterceptTouchEvent(event);
-    }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        return isSwipe && super.onTouchEvent(event);
-
-    }
-
-    public void setEnableSwipe(boolean isSwipe) {
-        this.isSwipe = isSwipe;
     }
 
 }

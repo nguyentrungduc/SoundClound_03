@@ -12,7 +12,6 @@ import com.framgia.soundclound.screen.home.HomeFragment;
 
 public class MainPagerAdapter extends FragmentPagerAdapter {
 
-
     private static final int TAB_COUNT = 4;
 
     public MainPagerAdapter(FragmentManager fm) {

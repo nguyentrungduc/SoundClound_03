@@ -7,9 +7,12 @@ import com.framgia.soundclound.R;
 
 public class GenreDetailActivity extends AppCompatActivity {
 
+    private GenreDetailViewModel mGenreDetailViewModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_genre_detail);
+        mGenreDetailViewModel = new GenreDetailViewModel();
     }
 }
