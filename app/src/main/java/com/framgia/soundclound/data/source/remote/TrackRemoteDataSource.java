@@ -1,34 +1,26 @@
-package com.ntd.themovie.data.source.remote;
+package com.framgia.soundclound.data.source.remote;
 
 import android.util.Log;
 
+import com.framgia.soundclound.data.model.Collection;
+import com.framgia.soundclound.data.model.ListTrack;
+import com.framgia.soundclound.data.model.Track;
+import com.framgia.soundclound.data.source.TrackDataSource;
+import com.framgia.soundclound.util.StringUtil;
 import com.google.gson.Gson;
-import com.ntd.themovie.Constant;
-import com.ntd.themovie.data.model.Collection;
-import com.ntd.themovie.data.model.ListTrack;
-import com.ntd.themovie.data.model.Track;
-import com.ntd.themovie.data.model.User;
-import com.ntd.themovie.data.source.TrackDataSource;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.List;
 
-/**
- * Created by ADMIN on 1/3/2018.
- */
-
 public class TrackRemoteDataSource implements TrackDataSource{
+
+    private static final String TAG = TrackRemoteDataSource.class.toString();
 
     public TrackRemoteDataSource() {
     }
 
-    private static final String TAG = TrackRemoteDataSource.class.toString();
     @Override
-    public void getListTrack(String url, final Callback<List<Track>> callback) {
-        //String url = Constant.ENDPOINT;
-        new LoadAsync(new Callback<String>() {
+    public void getListTrack(String url, String genre, int offSet, final Callback<List<Track>> callback) {
+        new LoadAsync(new TrackDataSource.Callback<String>() {
             @Override
             public void onStartLoading() {
                 callback.onStartLoading();
@@ -38,7 +30,7 @@ public class TrackRemoteDataSource implements TrackDataSource{
             public void onGetSuccess(String data) {
                 Log.d(TAG, "onGetSuccess: " + data);
                 if (data == null) {
-                    callback.onGetFailure("No Track :'<");
+                    callback.onGetFailure("No Track");
                     return;
                 }
                 List<Track> listTrack = Collection.toListTrack(new Gson()
@@ -56,6 +48,7 @@ public class TrackRemoteDataSource implements TrackDataSource{
             public void onComplete() {
                 callback.onComplete();
             }
-        }).execute(url);
+        }).execute(StringUtil.returnUrl(url, genre, offSet));
+
     }
 }

@@ -5,4 +5,7 @@ package com.framgia.soundclound.util;
  */
 
 public class StringUtil {
+    public static String returnUrl(String baseUrl, String genre, int offSet){
+        return baseUrl;
+    }
 }

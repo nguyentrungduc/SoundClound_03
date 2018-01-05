@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/color_white"
-            bind:onTabSelected="@{viewModel.tabSelectedListener}">
+            bind:tabSelectListener="@{viewModel.tabSelectedListener}">
 
             <android.support.design.widget.TabItem
                 android:text="@string/home"
@@ -54,7 +54,7 @@
         <com.framgia.soundclound.widget.IsSwipeViewPager
             app:isSwipe="false"
             android:id="@+id/view_pager"
-            bind:adapterpager="@{viewModel.pagerAdapter}"
+            bind:pageradapter="@{viewModel.pagerAdapter}"
             android:layout_height="match_parent"
             android:background="#FFF"
             android:layout_width="match_parent">

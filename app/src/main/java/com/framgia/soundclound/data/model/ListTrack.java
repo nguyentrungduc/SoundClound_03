@@ -1,4 +1,4 @@
-package com.framgia.soundclound.data.source.local;
+package com.framgia.soundclound.data.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -6,7 +6,6 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class ListTrack {
-
 
     @SerializedName("genre")
     @Expose
@@ -74,6 +73,5 @@ public class ListTrack {
     public void setNextHref(String nextHref) {
         this.nextHref = nextHref;
     }
-
 
 }

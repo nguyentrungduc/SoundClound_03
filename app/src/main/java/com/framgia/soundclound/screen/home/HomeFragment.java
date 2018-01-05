@@ -1,6 +1,5 @@
 package com.framgia.soundclound.screen.home;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,7 +12,6 @@ import com.framgia.soundclound.R;
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment {
-
 
     public static HomeFragment newInstance() {
         return new HomeFragment();

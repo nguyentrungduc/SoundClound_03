@@ -1,4 +1,4 @@
-package com.framgia.soundclound.data.source.local;
+package com.framgia.soundclound.data.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

@@ -10,7 +10,6 @@ import android.support.v4.content.ContextCompat;
 import com.framgia.soundclound.BR;
 import com.framgia.soundclound.R;
 
-
 /**
  * Created by Sony on 1/4/2018.
  */
@@ -46,17 +45,17 @@ public class MainViewModel extends BaseObservable {
                     tab.getIcon().setColorFilter(selectedColor, PorterDuff.Mode.SRC_ATOP);
                 }
                 switch (tab.getPosition()) {
-                    case MainActivity.HOME:
-                        mActivity.setPositon(MainPagerAdapter.HOME);
+                    case TabType.HOME:
+                        mActivity.setPositon(TabType.HOME);
                         break;
-                    case MainActivity.PLAY_LIST:
-                        mActivity.setPositon(MainPagerAdapter.PLAY_LIST);
+                    case TabType.PLAY_LIST:
+                        mActivity.setPositon(TabType.PLAY_LIST);
                         break;
-                    case MainActivity.DOWNLOAD:
-                        mActivity.setPositon(MainPagerAdapter.DOWNLOAD);
+                    case TabType.LOCAL:
+                        mActivity.setPositon(TabType.LOCAL);
                         break;
-                    case MainActivity.FAVORITE:
-                        mActivity.setPositon(MainPagerAdapter.FAVORITE);
+                    case TabType.FAVORITE:
+                        mActivity.setPositon(TabType.FAVORITE);
                         break;
                     default:
                         break;

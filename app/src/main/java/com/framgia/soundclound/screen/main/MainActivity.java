@@ -15,14 +15,9 @@ import com.framgia.soundclound.widget.IsSwipeViewPager;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final int HOME = 0;
-    public static final int PLAY_LIST = 1;
-    public static final int DOWNLOAD = 2;
-    public static final int FAVORITE = 3;
     private IsSwipeViewPager mViewPager;
     private MainViewModel mViewModel;
     private TabLayout mTabLayout;
-
 
     private static final String TAG = MainActivity.class.toString();
 
@@ -38,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
         mViewPager = binding.viewPager;
         mTabLayout = binding.tabLayout;
 
-        if (mTabLayout.getTabAt(HOME).getIcon() != null) {
+        if (mTabLayout.getTabAt(TabType.HOME).getIcon() != null) {
             int selectedColor = ContextCompat.getColor(this, R.color.color_orange);
-            mTabLayout.getTabAt(HOME).getIcon().setColorFilter(selectedColor,
+            mTabLayout.getTabAt(TabType.HOME).getIcon().setColorFilter(selectedColor,
                     PorterDuff.Mode.SRC_ATOP);
         }
 

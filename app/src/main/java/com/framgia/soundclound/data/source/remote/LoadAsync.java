@@ -1,8 +1,9 @@
-package com.ntd.themovie.data.source.remote;
+package com.framgia.soundclound.data.source.remote;
 
 import android.os.AsyncTask;
 
-import com.ntd.themovie.data.source.TrackDataSource;
+
+import com.framgia.soundclound.data.source.TrackDataSource;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,10 +14,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
-
-/**
- * Created by ADMIN on 1/3/2018.
- */
 
 public class LoadAsync extends AsyncTask<String, String, String>{
     private TrackDataSource.Callback<String> mCallback;

@@ -11,10 +11,7 @@ import com.framgia.soundclound.screen.home.HomeFragment;
  */
 
 public class MainPagerAdapter extends FragmentPagerAdapter {
-    public static final int HOME = 0;
-    public static final int PLAY_LIST = 1;
-    public static final int DOWNLOAD =2;
-    public static final int FAVORITE = 3;
+
 
     private static final int TAB_COUNT = 4;
 
@@ -23,15 +20,15 @@ public class MainPagerAdapter extends FragmentPagerAdapter {
     }
 
     @Override
-    public Fragment getItem(int position) {
+    public Fragment getItem(@TabType int position) {
         switch (position) {
-            case HOME:
+            case TabType.HOME:
                 return HomeFragment.newInstance();
-            case PLAY_LIST:
+            case TabType.PLAY_LIST:
                 return HomeFragment.newInstance();
-            case DOWNLOAD:
+            case TabType.LOCAL:
                 return HomeFragment.newInstance();
-            case FAVORITE:
+            case TabType.FAVORITE:
                 return HomeFragment.newInstance();
             default:
                 return null;
@@ -42,4 +39,5 @@ public class MainPagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return TAB_COUNT;
     }
+
 }
