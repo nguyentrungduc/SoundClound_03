@@ -10,9 +10,12 @@ import com.framgia.soundclound.BR;
 import com.framgia.soundclound.data.model.Track;
 import com.framgia.soundclound.data.source.TrackDataSource;
 import com.framgia.soundclound.data.source.TrackRepository;
+import com.framgia.soundclound.data.source.local.SharePreferences;
 import com.framgia.soundclound.data.source.remote.TrackRemoteDataSource;
 import com.framgia.soundclound.screen.moretrack.MoreTrackFragment;
+import com.framgia.soundclound.screen.playtrack.PlayTrackActivity;
 import com.framgia.soundclound.util.Constant;
+import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -54,7 +57,7 @@ public class GenreDetailViewModel extends BaseObservable implements TrackClickLi
 
                     @Override
                     public void onGetFailure(String message) {
-                        Toast.makeText(mContext , Constant.ERROR_TEXT, Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(mContext , Constant.ERROR_TEXT, Toast.LENGTH_SHORT).show();
 
                     }
 
@@ -77,8 +80,13 @@ public class GenreDetailViewModel extends BaseObservable implements TrackClickLi
     }
 
     @Override
-    public void onItemTrackClick(Track track) {
+    public void onItemTrackClick(Track track, int position) {
         // TODO: 1/10/2018 open playtrackactivity
+        SharePreferences.getInstance().putListTrack(new Gson().toJson(
+                mGenreDetailAdapter.getData()));
+        SharePreferences.getInstance().putTrack(new Gson().toJson(track));
+        SharePreferences.getInstance().putIndex(position);
+        //mContext.startActivity(PlayTrackActivity.getInstance(mContext));
 
     }
 
