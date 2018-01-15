@@ -1,0 +1,25 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.framgia.soundclound.screen.favourite.FavoriteViewModel"/>
+    </data>
+
+    <FrameLayout
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.framgia.soundclound.screen.favorite.FavouriteFragment">
+
+        <android.support.v7.widget.RecyclerView
+            recyclerAdapter="@{viewModel.favoriteTrackAdapter}"
+            app:layoutManager="LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+</layout>

@@ -16,8 +16,6 @@ import com.framgia.soundclound.databinding.ActivityPlayTrackBinding;
  */
 public class PlayTrackActivity extends AppCompatActivity {
 
-
-
     public static Intent getInstance(Context context) {
         return new Intent(context, PlayTrackActivity.class);
     }
