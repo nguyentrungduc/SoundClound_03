@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.framgia.soundclound.R;
+import com.framgia.soundclound.data.source.TrackRepository;
 import com.framgia.soundclound.databinding.ActivityMainBinding;
 
 /**
@@ -15,7 +16,9 @@ import com.framgia.soundclound.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = MainActivity.class.toString();
     private MainViewModel mViewModel;
+    private TrackRepository mTrackRepository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

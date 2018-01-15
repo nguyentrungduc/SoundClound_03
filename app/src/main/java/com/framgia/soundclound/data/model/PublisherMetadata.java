@@ -2,12 +2,13 @@ package com.framgia.soundclound.data.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import io.realm.RealmObject;
 
 /**
  * Created by Sony on 1/5/2018.
  */
 
-public class PublisherMetadata {
+public class PublisherMetadata extends RealmObject{
 
     @SerializedName("id")
     @Expose
@@ -24,6 +25,9 @@ public class PublisherMetadata {
     @SerializedName("contains_music")
     @Expose
     private boolean mContainsMusic;
+
+    public PublisherMetadata() {
+    }
 
     public PublisherMetadata(String artist) {
         mArtist = artist;

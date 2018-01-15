@@ -84,7 +84,8 @@ public class GenreDetailViewModel extends BaseObservable implements TrackClickLi
                 mGenreDetailAdapter.getData()));
         SharePreferences.getInstance().putTrack(new Gson().toJson(track));
         SharePreferences.getInstance().putIndex(position);
-        mContext.startActivity(PlayTrackActivity.getInstance(mContext));
+        mContext.startActivity(PlayTrackActivity.getInstance(mContext,
+                mGenreDetailAdapter.getData(), position));
 
     }
 

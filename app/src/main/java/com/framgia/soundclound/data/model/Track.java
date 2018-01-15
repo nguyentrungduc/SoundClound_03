@@ -6,13 +6,13 @@ import android.os.Parcelable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.io.Serializable;
+import io.realm.RealmObject;
 
 /**
  * Created by Sony on 1/5/2018.
  */
 
-public class Track implements Parcelable {
+public class Track extends RealmObject implements Parcelable {
     @SerializedName("artwork_url")
     @Expose
     private String mArtworkUrl;
@@ -255,5 +255,5 @@ public class Track implements Parcelable {
         parcel.writeString(mDisplayDate);
 
     }
-    
+
 }

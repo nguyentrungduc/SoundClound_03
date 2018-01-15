@@ -13,11 +13,13 @@ import java.util.List;
 
 public class PlayTrackViewModel extends BaseObservable {
     private List<Track> mTrackList;
+    private int mPosition;
     private Track mTrack;
 
-    public PlayTrackViewModel(List<Track> tracks, Track track) {
+    public PlayTrackViewModel(List<Track> tracks, int position) {
         mTrackList = tracks;
-        mTrack = track;
+        mPosition = position;
+        mTrack = mTrackList.get(position);
     }
 
     public String getTitle() {
