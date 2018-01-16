@@ -35,8 +35,8 @@ public @interface ServiceName {
     String GENRES_POP = "pop";
     String GENRES_COUNTRY = "country";
     String GENRES_POP_BLAS = "jazzblues";
-    String GENRES_DEEP_HOUSE = "deephouse";
-    String GENRES_ROCK = "rock";
+    String GENRES_DEEP_HOUSE = "bg_deephouse";
+    String GENRES_ROCK = "bg_rock";
     String GENRES_EDM = "danceedm";
     String GENRES_CLASSIC = "classical";
     String GENRES_ELECTRONIC = "electronic";
@@ -47,31 +47,31 @@ public @interface ServiceName {
 
     public static List<Genre> getListGenres() {
         List<Genre> genres = new ArrayList<>();
-        genres.add(new Genre(R.string.genres_all, R.drawable.img_background_genres,
+        genres.add(new Genre(R.string.genres_all, R.drawable.bg_all,
                 GENRES_ALL,
                 R.drawable.icon_music_all));
-        genres.add(new Genre(R.string.genres_pop, R.drawable.img_background_genres,
+        genres.add(new Genre(R.string.genres_pop, R.drawable.bg_pop,
                 GENRES_POP,
                 R.drawable.icon_music_pop));
-        genres.add(new Genre(R.string.genres_country, R.drawable.img_background_genres,
+        genres.add(new Genre(R.string.genres_country, R.drawable.bg_country,
                 GENRES_COUNTRY,
                 R.drawable.icon_music_country));
-        genres.add(new Genre(R.string.genres_classic, R.drawable.img_background_genres,
+        genres.add(new Genre(R.string.genres_classic, R.drawable.bg_deephouse,
                 GENRES_CLASSIC,
                 R.drawable.icon_music_classic));
-        genres.add(new Genre(R.string.genres_depp_house, R.drawable.img_background_genres,
+        genres.add(new Genre(R.string.genres_depp_house, R.drawable.bg_deephouse,
                 GENRES_DEEP_HOUSE,
                 R.drawable.icon_music_deephouse));
-        genres.add(new Genre(R.string.genres_popblas, R.drawable.img_background_genres,
+        genres.add(new Genre(R.string.genres_popblas, R.drawable.bg_bl,
                 GENRES_POP_BLAS,
                 R.drawable.icon_music_popblast));
-        genres.add(new Genre(R.string.genres_rock, R.drawable.ic_favorite_gray_24dp,
+        genres.add(new Genre(R.string.genres_rock, R.drawable.bg_rock,
                 GENRES_ROCK,
                 R.drawable.icon_music_roock));
-        genres.add(new Genre(R.string.genres_edm, R.drawable.ic_favorite_gray_24dp,
+        genres.add(new Genre(R.string.genres_edm, R.drawable.bg_edm,
                 GENRES_EDM,
                 R.drawable.icon_musicedm));
-        genres.add(new Genre(R.string.genres_electronic, R.drawable.ic_favorite_gray_24dp,
+        genres.add(new Genre(R.string.genres_electronic, R.drawable.bg_ele,
                 GENRES_ELECTRONIC,
                 R.drawable.icon_musicedm));
         return genres;

@@ -39,5 +39,12 @@ public class Constant {
     public static final String EXTRA_TRACK = "com.frangia.soundcloud.EXTRA_TRACK";
     public static final int INDEX_DEFAULTE = 1;
     public static final String FILE_EXTENTION = ".mp3";
+
+    public static final int ID_FOREGROUND_SERVICE = 101;
+    public static final String ACTION_MAIN = "com.framgia.soundclound.action.main";
+    public static final String ACTION_PREV = "com.framgia.soundclound.action.action.prev";
+    public static final String ACTION_PLAY = "com.framgia.soundclound.action.action.play";
+    public static final String ACTION_NEXT = "com.framgia.soundclound.action.action.next";
+    public static final String ACTION_DISMIS = "com.framgia.soundclound.action.action.dismis";
 }
 

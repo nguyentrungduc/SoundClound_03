@@ -34,7 +34,7 @@ public class HomeViewModel extends BaseObservable implements OnItemClickListener
 
     @Override
     public void onClick(Genre genres) {
-        mContext.startActivity(GenreDetailActivity.getInstance(mContext, genres.getKeyname()));
+        mContext.startActivity(GenreDetailActivity.getInstance(mContext, genres));
 
     }
 

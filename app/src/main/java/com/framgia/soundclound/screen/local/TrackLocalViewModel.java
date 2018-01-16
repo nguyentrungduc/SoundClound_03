@@ -12,6 +12,7 @@ import android.support.v4.content.ContextCompat;
 import com.framgia.soundclound.BR;
 import com.framgia.soundclound.data.model.Track;
 import com.framgia.soundclound.data.source.TrackRepository;
+import com.framgia.soundclound.data.source.local.SharePreferences;
 import com.framgia.soundclound.data.source.remote.TrackRemoteDataSource;
 import com.framgia.soundclound.util.Constant;
 
@@ -53,6 +54,7 @@ public class TrackLocalViewModel extends BaseObservable implements TrackClickLis
     @Override
     public void onItemTrackClick(Track track) {
         // TODO: 1/10/2018 open playtrack
+
     }
 
     public boolean checkPermisson() {

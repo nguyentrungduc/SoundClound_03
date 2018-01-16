@@ -5,8 +5,11 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 import com.framgia.soundclound.R;
+import com.framgia.soundclound.data.model.Genre;
 import com.framgia.soundclound.databinding.ActivityGenreDetailBinding;
 import com.framgia.soundclound.util.Constant;
 
@@ -16,7 +19,7 @@ import com.framgia.soundclound.util.Constant;
 
 public class GenreDetailActivity extends AppCompatActivity {
 
-    public static Intent getInstance(Context context, String genre) {
+    public static Intent getInstance(Context context, Genre genre) {
         Intent intent = new Intent(context, GenreDetailActivity.class);
         intent.putExtra(Constant.EXTRA_GENRE, genre);
         return intent;
@@ -25,13 +28,24 @@ public class GenreDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_genre_detail);
         ActivityGenreDetailBinding activityGenreDetailBinding = DataBindingUtil
                 .setContentView(this, R.layout.activity_genre_detail);
-        GenreDetailViewModel mViewModel = new GenreDetailViewModel(this, getIntent().getExtras()
-                .getString(Constant.EXTRA_GENRE));
+        GenreDetailViewModel mViewModel = new GenreDetailViewModel(this,
+                (Genre) getIntent().getSerializableExtra(Constant.EXTRA_GENRE));
         activityGenreDetailBinding.setViewModel(mViewModel);
-        getSupportActionBar().hide();
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
